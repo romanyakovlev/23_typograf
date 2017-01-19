@@ -27,22 +27,39 @@
     </nav>
 
     <div class="container">
-      <form method="POST">
+
         <div class="form-group">
-          <textarea name="text" class="form-control" rows="10" placeholder="Введите текст" autofocus></textarea>
+          <textarea id="read_text_id" name="text" class="form-control" rows="10" placeholder="Введите текст" autofocus></textarea>
         </div>
 
         <div class="form-group">
-          <button class="btn btn-primary" type="submit">Сделать красиво</button>
+            <a id="button_id" class="btn btn-primary">Сделать красиво</a>
         </div>
 
         <div class="form-group">
-          <textarea class="form-control" rows="10" placeholder="Здесь будет результат" disabled="disabled"></textarea>
+          <textarea id="textarea_id" class="form-control" rows="10" placeholder="Здесь будет результат" disabled="disabled"></textarea>
         </div>
-      </form>
+
     </div><!-- /.container -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+        $("#button_id").click(function(){
+             $.ajax({
+                type : "POST",
+                url : "/",
+                data: JSON.stringify({'text_string': $("#read_text_id").val()}),
+                contentType: 'application/json;charset=UTF-8',
+                dataType: "json",
+                success : function(data) {
+                    console.log(data);
+                    $('#textarea_id').text(data['rendered_text']);
+                }
+            });
+        });
+    </script>
+    
   </body>
 </html>
