@@ -2,11 +2,11 @@
 
 Small typograf script that prepares text for web.
 What script does:
-- replace single and double quotes
-- replace hyphen on short dash between numbers
-- remove extra spaces and extra new lines
-- add non-breaking space between short word and other word
-- replace hyphen to dash between spaces
+- replaces single and double quotes
+- replaces hyphen on short dash between numbers
+- removes extra spaces and extra new lines
+- adds non-breaking space between short word and other word
+- replaces hyphen to dash between spaces
 
 # Installing
 
