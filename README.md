@@ -19,8 +19,7 @@ install requirements:
 ```sh
 pip3 install -r requirements.txt
 ```
-Go to [http://localhost:5000/](https://devman.org)
-
+Go to [http://localhost:5000/](http://localhost:5000/)
 # Using
 
 Run script from repo folder:
