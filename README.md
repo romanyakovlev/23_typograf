@@ -19,6 +19,15 @@ install requirements:
 ```sh
 pip3 install -r requirements.txt
 ```
+Go to http://localhost:5000/
+
+# Using
+
+Run script from repo folder:
+```sh
+python3 server.py
+```
+Flask app 
 
 What is used:
 - Flask
