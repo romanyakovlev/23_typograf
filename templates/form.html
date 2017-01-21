@@ -27,18 +27,19 @@
     </nav>
 
     <div class="container">
+        <form action="" method="post">
+            <div class="form-group">
+              <textarea id="read_text_id" name="text" class="form-control" rows="10" placeholder="Введите текст" autofocus></textarea>
+            </div>
 
-        <div class="form-group">
-          <textarea id="read_text_id" name="text" class="form-control" rows="10" placeholder="Введите текст" autofocus></textarea>
-        </div>
+            <div class="form-group">
+                <a id="button_id" class="btn btn-primary">Сделать красиво</a>
+            </div>
 
-        <div class="form-group">
-            <a id="button_id" class="btn btn-primary">Сделать красиво</a>
-        </div>
-
-        <div class="form-group">
-          <textarea id="textarea_id" class="form-control" rows="10" placeholder="Здесь будет результат" disabled="disabled"></textarea>
-        </div>
+            <div class="form-group">
+              <textarea id="textarea_id" class="form-control" rows="10" placeholder="Здесь будет результат" disabled="disabled"></textarea>
+            </div>
+        </form>
 
     </div><!-- /.container -->
 
@@ -54,12 +55,11 @@
                 contentType: 'application/json;charset=UTF-8',
                 dataType: "json",
                 success : function(data) {
-                    console.log(data);
-                    $('#textarea_id').text(data['rendered_text']);
+                    $('#textarea_id').html(data['formatted_text']);
                 }
             });
         });
     </script>
-    
+
   </body>
 </html>
