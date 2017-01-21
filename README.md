@@ -8,6 +8,10 @@ What script does:
 - adds non-breaking space between short word and other word
 - replaces hyphen to dash between spaces
 
+What is used:
+- Flask
+- JQuery
+
 # Installing
 
 clone repository:
@@ -19,18 +23,15 @@ install requirements:
 ```sh
 pip3 install -r requirements.txt
 ```
-Go to [http://localhost:5000/](http://localhost:5000/)
+
 # Using
 
 Run script from repo folder:
 ```sh
 python3 server.py
 ```
-Flask app 
 
-What is used:
-- Flask
-- JQuery
+Go to [http://localhost:5000/](http://localhost:5000/)
 
 # Project Goals
 
