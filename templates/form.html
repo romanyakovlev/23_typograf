@@ -51,11 +51,9 @@
              $.ajax({
                 type : "POST",
                 url : "/",
-                data: JSON.stringify({'text_string': $("#read_text_id").val()}),
-                contentType: 'application/json;charset=UTF-8',
-                dataType: "json",
+                data: $('form').serialize(),
                 success : function(data) {
-                    $('#textarea_id').html(data['formatted_text']);
+                    $('#textarea_id').html(data);
                 }
             });
         });
